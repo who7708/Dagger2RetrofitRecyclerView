@@ -24,7 +24,7 @@ public class RetrofitModule {
     @ApplicationScope
     Retrofit getRetrofit(OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
-                .baseUrl("https://swapi.co/api/")
+                .baseUrl("https://springboot.net.cn/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
