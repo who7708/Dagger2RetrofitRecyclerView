@@ -2,7 +2,7 @@ package com.journaldev.dagger2retrofitrecyclerview.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.journaldev.dagger2retrofitrecyclerview.MyApplication;
@@ -40,7 +40,7 @@ public class DetailActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
 
-        String url = getIntent().getStringExtra("url");
+        String url = getIntent().getStringExtra("url") + ".json";
 
         ApplicationComponent applicationComponent = MyApplication.get(this).getApplicationComponent();
         detailActivityComponent = DaggerDetailActivityComponent.builder()

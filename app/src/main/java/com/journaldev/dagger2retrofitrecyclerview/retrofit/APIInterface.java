@@ -12,7 +12,7 @@ import retrofit2.http.Url;
 public interface APIInterface {
 
 
-    @GET("people/?")
+    @GET("people/people.json?")
     Call<StarWars> getPeople(@Query("format") String format);
 
     @GET
